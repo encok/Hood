@@ -14,6 +14,9 @@ import os
 from decouple import config
 import dj_database_url
 from decouple import config,Csv
+import cloudinary.uploader
+import cloudinary.api
+import cloudinary
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -53,6 +56,7 @@ EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
 # Application definition
 
 INSTALLED_APPS = [
+    'cloudinary',
     'neighbourhood',
     'bootstrap4',
     'tinymce',

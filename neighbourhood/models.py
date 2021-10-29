@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from tinymce.models import HTMLField
+from cloudinary.models import CloudinaryField
 
 # Create your models here.
 
@@ -26,7 +27,7 @@ class neighbourhood(models.Model):
 
 
 class Profile(models.Model):
-    profpic = models.ImageField(upload_to='profpics/')
+    profpic = CloudinaryField('image')
     description = HTMLField()
     neighbourhood = models.ForeignKey(neighbourhood,on_delete=models.CASCADE)
     username = models.ForeignKey(User,on_delete=models.CASCADE)
@@ -43,7 +44,7 @@ class BlogPost(models.Model):
     username = models.ForeignKey(User,on_delete=models.CASCADE)
     neighbourhood= models.ForeignKey(neighbourhood,on_delete=models.CASCADE)
     post_date = models.DateTimeField(auto_now_add=True)
-    profpic = models.ImageField(upload_to='profpics/')
+    profpic = CloudinaryField('image')
 
     def __str__(self):
         return self.title
@@ -54,7 +55,7 @@ class Comment(models.Model):
     post = models.ForeignKey(BlogPost,on_delete=models.CASCADE)
 
 class Business(models.Model):
-    logo = models.ImageField(upload_to='logos/')
+    logo = CloudinaryField('image')
     description = HTMLField()
     neighbourhood = models.ForeignKey(neighbourhood,on_delete=models.CASCADE)
     owner = models.ForeignKey(User,on_delete=models.CASCADE)
@@ -86,7 +87,7 @@ class healthservices(models.Model):
         cls.objects.filter(healthservices=healthservices).delete()
 
 class Health(models.Model):
-    logo = models.ImageField(upload_to='healthlogo/')
+    logo =CloudinaryField('image')
     neighbourhood = models.ForeignKey(neighbourhood,on_delete=models.CASCADE)
     name =models.CharField(max_length=100)
     email = models.EmailField()
