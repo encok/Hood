@@ -104,17 +104,6 @@ TEMPLATES = [
 WSGI_APPLICATION = 'Neighbours.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/2.2/ref/settings/#databases
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'neighbourhood',
-#         'USER': 'mannuh',
-#         'PASSWORD':'Emmah@7127',
-#     }
-# }
 
 
 # Password validation
