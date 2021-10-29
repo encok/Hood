@@ -153,3 +153,11 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
+
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.RawMediaCloudinaryStorage'
+cloudinary.config(
+  cloud_name ="enock-photoshare", 
+  api_key = "528228593828417", 
+  api_secret = "fpcwnXX4nQPiHpva17H58KySXsk",
+)
+
