@@ -1,12 +1,14 @@
-### Project Title
+# Project Title
  NEIGHBOURHOOD
-This is an application that allows users in an area to interact with other people who also live in the same area. The users can look up businesses in that area and also create posts that let the other neighbours know of the happenings in the nieghbourhood.
+
 
 # Author
 > [Enock Kipronoh](https://github.com/encok "encok")
 
-### Description
-This is an application that allows users in an area to interact with other people who also live in the same area. Users an create posts that details what is going on within the neighbourhood and also create posts that detail businesses located in that area. Users can also find the contacts for the local police authorities and health centres.
+## Description
+This is an application that enables users in an area to interact with other people who also live in the same neighbourhood. Users an create posts that details what is going on within the neighbourhood and also create posts that detail businesses located in that area. Users can also find the contacts for the local police authorities and health centres.
+
+## Behavior Driven Development (BDD)
  
 
 |        User Requirements                 |           Input                           |           Output                         |
@@ -27,28 +29,38 @@ This is an application that allows users in an area to interact with other peopl
 |                                          | log out                                   |                                          |
 
 
-### Setup/Installation Requirements
-- Ensure you have Python3.6 installed.
-- Clone the Neighbourhoods directory.
-- Create your own virtual environment and activate it using these respective commands `python3.6 -m venv --without-pip virtual` and  `source virtual/bin/activate`
-- Install all the necessary dependencies necessary for running the application using this command `pip install -r requirements.txt`
-- Open the terminal and run this command `psql` You can then create a database by running this command
-`CREATE DATABASE hood`
-- Run migrations using these respective commmands `python3.6 manage.py makemigrations projects` then `python3.6 manage.py migrate`
-- Run the app using this command `python3.6 manage.py runserver` on the terminal.You can then open the app on your browser.
+## Installation Requirements
+Clone this repository and navigate to the folder.
+Run the following commands to allow functionality of the app:-
 
+* sudo apt-get install python3.8
+* sudo apt-get install python3-pip
+* sudo apt-get install python3.8-env
+* python3.8 -m env virtual
+* source env/bin/activate
+* pip install -r requirements.txt
+## Tests
+Run the following command for tests<br>
+* $ python manage.py test projects
+* $ python manage.py test users
 
-### Technologies Used
-<ul>
-<li>Python 3.6</li>
-<li>Django</li>
-<li>Heroku</li>
-<li>Bootstrap</li>
-<li>HTML</li>
-</ul>
+## Technologies Used
+---
+```
+* Python 3.8
+* HTML5, CSS and Bootstrap4
+* jdango3.2.4 Framework
+* Postgressql
+* Heroku
+```
+## Known Bugs
+No known bugs so far
 
-### Support and Contact Details
-For more information, questions, or feedback, get in touch with me on email: Emmanuel.Muchiri@outlook.com
+## Support Details
+Contact me for further help<br/> 
+email: enckkipronoh@gmail.com<br/>
+Phone: 0717854859
+## License
+This is the link to the MIT license used<br/><br/>
+> License link<br/>
 
-### Licence
-Copyright(c) 2019 Emmanuel Muchiri
