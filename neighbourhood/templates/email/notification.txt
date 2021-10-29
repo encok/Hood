@@ -4,6 +4,6 @@ Hello {{name}},
 
 {{message | safe }}
 
-Yours Fauthfully,
+Yours Sincerely,
 {{author}}
 Enjoy your Stay In Our Neighbourhood- {{neighbourhood}}
