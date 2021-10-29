@@ -21,4 +21,4 @@ class neighbourhoodTestClass(TestCase):
     def test_delete_method(self):
         self.Kasarani.delete_neighbourhood('Kasarani')
         hood = neighbourhood.objects.all()
-		self.assertTrue(len(hood)==0)
+        self.assertTrue(len(hood)==0)

@@ -18,13 +18,12 @@ from decouple import config,Csv
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-MODE=config("MODE", default="dev")
-# SECRET_KEY = config('SECRET_KEY')
+
 SECRET_KEY='tm*0daod4#1k9i1v9j@n@^^vhnk_2puglbx=k=_07vwo08a%gf'
-DEBUG = config('DEBUG', default=False, cast=bool)
+DEBUG = config('DEBUG', default=True, cast=bool)
 # development
-if config('MODE')=="dev":
-   DATABASES = {
+
+DATABASES = {
        'default': {
            'ENGINE': 'django.db.backends.postgresql_psycopg2',
            'NAME': config('DB_NAME'),
@@ -36,17 +35,12 @@ if config('MODE')=="dev":
        
    }
 # production
-else:
-   DATABASES = {
-       'default': dj_database_url.config(
-           default=config('DATABASE_URL')
-       )
-   }
+
 
 db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
 
-ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
+ALLOWED_HOSTS = []
 
 # Email configurations remember to install python-decouple
 EMAIL_USE_TLS = config('EMAIL_USE_TLS')
