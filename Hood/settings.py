@@ -9,7 +9,9 @@ https://docs.djangoproject.com/en/2.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.2/ref/settings/
 """
-
+from six import python_2_unicode_compatible
+import django.utils.encoding
+django.utils.encoding.python_2_unicode_compatible =python_2_unicode_compatible
 import os
 from decouple import config
 import dj_database_url
@@ -160,3 +162,4 @@ cloudinary.config(
   api_secret = "fpcwnXX4nQPiHpva17H58KySXsk",
 )
 
+DEFAULT_AUTO_FIELD='django.db.models.AutoField'
