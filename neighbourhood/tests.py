@@ -3,15 +3,15 @@ from .models import neighbourhood,healthservices
 from django.contrib.auth.models import User
 import datetime as dt
 # Create your tests here.
-# class neighbourhoodTestClass(TestCase):
-#     def setUp(self):
-#         self.Kasarani = neighbourhood(neighbourhood='Kasarani')
+class neighbourhoodTestClass(TestCase):
+    def setUp(self):
+        self.Kasarani = neighbourhood(neighbourhood='Kasarani')
 
-#     def test_instance(self):
-#         self.assertTrue(isinstance(self.Kasarani,neighbourhood))
+    def test_instance(self):
+        self.assertTrue(isinstance(self.Kasarani,neighbourhood))
 
-#     def tearDown(self):
-#         neighbourhood.objects.all().delete()
+    def tearDown(self):
+        neighbourhood.objects.all().delete()
 
 #     def test_save_method(self):
 #         self.Kasarani.create_neighbourhood()
