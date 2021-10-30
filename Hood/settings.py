@@ -59,6 +59,7 @@ INSTALLED_APPS = [
     'cloudinary',
     'neighbourhood',
     'bootstrap4',
+    'bootstrap5',
     'tinymce',
     'registration',
     'rest_framework',

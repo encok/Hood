@@ -31,7 +31,12 @@
             </li>
             {% endif %}
             {% if user.is_authenticated %}
-            <li class="nav-item">
+            <li class="nav-item dropdown">
+                <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Profile
+                  </a>
+    
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown" label="profile">
                 <a class="nav-link" href="{% url 'my-profile'%}">Profile</a>
             </li>
             <li class="nav-item">
@@ -40,6 +45,16 @@
             <li class="nav-item">
                 <a class="nav-link" href="/logout">Logout</a>
             </li>
+            </ul>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Profile
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
 
             <!-- profile start -->
             <!-- <li class="nav-item dropdown">
@@ -67,6 +82,7 @@
         </ul>
     </div>
 </nav>
+
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
 integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
