@@ -1,4 +1,5 @@
 {% load static %}
+
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" style="color:orange;font-style: oblique;"href="/">Neighbourhood Sheriff</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -23,14 +24,7 @@
             <li class="nav-item">
                 <a class="nav-link" href="{% url 'notifications'%}">Notifications</a>
             </li>
-            <li class="nav navbar-nav navbar-right">
-                <form class="navbar-form" role="search" action="{% url 'search_results'%}">
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Find business desc? "
-                            name="business">
-                    </div>
-                </form>
-            </li>
+
             {% if user.is_superuser %}
             <li class="nav-item">
                 <a class="nav-link" href="/admin">Admin</a>
@@ -47,6 +41,24 @@
                 <a class="nav-link" href="/logout">Logout</a>
             </li>
 
+            <!-- profile start -->
+            <!-- <li class="nav-item dropdown">
+                <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Profile
+                </a>
+  
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown" label="profile">
+                  <li><a class="dropdown-item"  href="/logout">logout</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="{% url 'my-profile' %}">View Profile</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="{% url 'update-profile' %}">Edit Profile</a></li>
+                </ul>
+              </li> -->
+            <!-- profile end -->
+         
+        </ul>
+        
             {% else %}
             <li class="nav-item">
                 <a class="nav-link" href="/accounts/login">Sign In</a>
@@ -55,3 +67,23 @@
         </ul>
     </div>
 </nav>
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+
+<div class="container m-5">
+    <li class="nav navbar-nav navbar-right">
+        <form class="navbar-form" role="search" action="{% url 'search_results'%}">
+            <div class="input-group">
+                <!-- <input type="text" class="form-control" placeholder="Search business "
+                    name="business"> -->
+                    <input class="form-control" type="search" placeholder="Search business" aria-label="Search">
+                    <!-- <button id="bs" class="btn btn-outline-success" type="submit">Search</button> -->
+            </div>
+        </form>
+    </li>
+</div>
+
+<!-- <input class="form-control me-2" type="search" placeholder="Search Project" aria-label="Search">
+<button id="bs" class="btn btn-outline-success" type="submit">Search</button> -->
