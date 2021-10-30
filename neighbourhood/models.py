@@ -26,16 +26,16 @@ class neighbourhood(models.Model):
 
 
 
-# class Profile(models.Model):
-#     profpic = CloudinaryField('image')
-#     description = HTMLField()
-#     neighbourhood = models.ForeignKey(neighbourhood,on_delete=models.CASCADE)
-#     username = models.ForeignKey(User,on_delete=models.CASCADE)
-#     name =models.CharField(max_length=100)
-#     email = models.EmailField()
+class Profile(models.Model):
+    profpic = CloudinaryField('image')
+    description = HTMLField()
+    neighbourhood = models.ForeignKey(neighbourhood,on_delete=models.CASCADE)
+    username = models.ForeignKey(User,on_delete=models.CASCADE)
+    name =models.CharField(max_length=100)
+    email = models.EmailField()
 
-#     def __str__(self):
-#         return self.name
+    def __str__(self):
+        return self.name
 
 # class BlogPost(models.Model):
 #     title = models.CharField(max_length=150)
