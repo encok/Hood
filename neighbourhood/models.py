@@ -67,10 +67,10 @@ class Business(models.Model):
     def __str__(self):
         return self.name
     
-#     @classmethod
-#     def search_business(cls,search_term):
-#         businesses = cls.objects.filter(description__icontains=search_term)
-#         return businesses
+    @classmethod
+    def search_business(cls,search_term):
+        businesses = cls.objects.filter(description__icontains=search_term)
+        return businesses
     
 
 class healthservices(models.Model):
