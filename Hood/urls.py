@@ -22,6 +22,6 @@ urlpatterns = [
     url('admin/', admin.site.urls),
     url(r'',include('neighbourhood.urls')),
     url(r'^accounts/', include('registration.backends.simple.urls')),
-    url(r'^logout/$', views.logout, {"next_page": '/'})
+    url(r'^logout/$', views.LogoutView, {"next_page": '/'})
 
 ]
