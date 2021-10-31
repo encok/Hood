@@ -4,10 +4,15 @@
 
 
 {% block content %}
-
+<style>
+    .card-title:hover{
+        font-size:36px;
+        background-color:cadetblue;
+    }
+</style>
 <div class="container">
     <div class="row">
-        <div class="col-md-12 top-div" style="margin-top:40px;">
+        <div class="text-center m-5">
             <h1>Health Services</h1>
 
         </div>
@@ -18,9 +23,9 @@
 
         {% for health in healthservices %}
         <div class="col-md-6">
-            <div class="card" style="width: 25rem;margin-top:10px;">
+            <div class="card bg-dark" style="width: 25rem;margin-top:10px;">
                 <div class="card-body">
-                    <h3 class="card-title" data-toggle="modal" data-target="#{{health.id}}">{{health.name}}</h3>
+                    <h3 class="card-title text-light" data-toggle="modal" data-target="#{{health.id}}">{{health.name}}</h3>
                 </div>
             </div>
         </div>

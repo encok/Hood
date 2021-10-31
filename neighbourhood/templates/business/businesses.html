@@ -5,24 +5,33 @@
 
 
 {% block content %}
-
+<style>
+    .card-title:hover{
+        font-size:large;
+        background-color:cadetblue;
+    }
+</style>
 <div class="container">
     <div class="row">
         <div class="col-md-12 top-div" style="margin-top:40px;"></div>
     </div>
+     <div class="text-center m-5">
+
+      <h3>Businesses In the Neighbourhood</h3>
+     </div>
 
     <div class="text-center">
         <a href="{% url 'new-business' %}">
-            <button class="btn btn-info" style="height:50px;  margin-top: -6px;">Add Your Business</button>
+            <button class="btn btn-info m-3" style="height:50px;  margin-top: -6px;">Add Your Business</button>
         </a>
     </div>
 
     <div class="row">
         {% for business in businesses %}
-        <div class="col-md-6">
-            <div class="card" style="width: 20rem;margin-top:10px;">
+        <div class="col-md-6 ">
+            <div class="card bg-dark" style="width: 20rem;margin-top:10px;">
                 <div class="card-body">
-                    <h3 class="card-title btn" data-toggle="modal" data-target="#{{business.id}}">
+                    <h3 class="card-title btn text-light" data-toggle="modal" data-target="#{{business.id}}">
                         {{business.name|truncatechars:19}}</h3>
                 </div>
             </div>

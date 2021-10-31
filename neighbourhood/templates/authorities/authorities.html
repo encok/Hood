@@ -8,6 +8,10 @@
     .container{
         background-color: whitesmoke;
     }
+    .card-title:hover{
+        font-size:36px;
+        background-color:cadetblue;
+    }
 </style>
 
 <div class="container">
@@ -21,9 +25,9 @@
     <div class="row">
         {% for authority in authorities %}
         <div class="col-md-6">
-            <div class="card" style="width: 20rem;width: 25rem;margin-top:10px; ">
+            <div class="card bg-dark" style="width: 20rem;width: 25rem;margin-top:10px; ">
                 <div class="card-body">
-                    <h3 class="card-title" data-toggle="modal" data-target="#{{authority.id}}">{{authority.name}}</h3>
+                    <h3 class="card-title text-light" data-toggle="modal" data-target="#{{authority.id}}">{{authority.name}}</h3>
                 </div>
             </div>
         </div>
