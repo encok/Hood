@@ -19,6 +19,7 @@ from decouple import config,Csv
 import cloudinary.uploader
 import cloudinary.api
 import cloudinary
+import django_heroku
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -163,3 +164,5 @@ cloudinary.config(
 )
 
 DEFAULT_AUTO_FIELD='django.db.models.AutoField'
+# Activate Django-Heroku.
+django_heroku.settings(locals())
