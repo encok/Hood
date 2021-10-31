@@ -9,9 +9,7 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="{% url 'blog'%}">Blog</a>
-            </li>
+         
             <li class="nav-item">
                 <a class="nav-link" href="{% url 'business'%}">Businesses</a>
             </li>
@@ -23,6 +21,14 @@
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="{% url 'notifications'%}">Notifications</a>
+            </li>
+            <li class="nav navbar-nav navbar-right">
+                <form class="navbar-form" role="search" action="{% url 'search_results'%}">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search business "
+                            name="business">
+                    </div>
+                </form>
             </li>
 
             {% if user.is_superuser %}
@@ -85,18 +91,9 @@
 integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 
 
-<div class="container m-5">
-    <li class="nav navbar-nav navbar-right">
-        <form class="navbar-form" role="search" action="{% url 'search_results'%}">
-            <div class="input-group">
-                <!-- <input type="text" class="form-control" placeholder="Search business "
-                    name="business"> -->
-                    <input class="form-control" type="search" placeholder="Search business" aria-label="Search">
-                    <!-- <button id="bs" class="btn btn-outline-success" type="submit">Search</button> -->
+
             </div>
         </form>
     </li>
-</div>
+</div>  
 
-<!-- <input class="form-control me-2" type="search" placeholder="Search Project" aria-label="Search">
-<button id="bs" class="btn btn-outline-success" type="submit">Search</button> -->
