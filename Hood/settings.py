@@ -25,7 +25,7 @@ import django_heroku
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
-SECRET_KEY='tm*0daod4#1k9i1v9j@n@^^vhnk_2puglbx=k=_07vwo08a%gf'
+SECRET_KEY='dnsfcbscdjkjwrkatotokamecenodnc23@#$%'
 DEBUG = config('DEBUG', default=True, cast=bool)
 # development
 
